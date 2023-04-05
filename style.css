@@ -102,4 +102,92 @@ body{
     font-family: var(--font-familly-Inter);
     font-size: 0.9375rem;
     font-weight: 400;
+    min-height: 100dvh;
+    min-width: 100dvw;
+}
+
+
+/*******************************************************
+                        footer CSS
+*******************************************************/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+main{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "alias-nav"
+  "alias-hero"
+  "alias-aside"
+  "alias-trend";
+}
+/*******************************************************
+                        Navigation CSS
+*******************************************************/
+.navigation{
+  grid-area: alias-nav;
+}
+/*******************************************************
+                    Main hero CSS
+*******************************************************/
+.main-hero{
+  grid-area: alias-hero;
+}
+/*******************************************************
+                        articles-aside CSS
+*******************************************************/
+.articles-aside{
+  grid-area: alias-aside;
+}
+/*******************************************************
+                        trending-articles CSS
+*******************************************************/
+.trending-articles{
+  grid-area: alias-trend;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*******************************************************
+                        Media Query CSS
+*******************************************************/
+@media (min-width: 600px){
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "alias-nav alias-nav alias-nav"
+    "alias-hero alias-hero alias-aside"
+    "alias-hero alias-hero alias-aside"
+    "alias-trend alias-trend alias-trend";
+  }
+  /*******************************************************
+                        Navigation CSS
+*******************************************************/
+.navigation{
+  grid-area: alias-nav;
+}
+/*******************************************************
+                    Main hero CSS
+*******************************************************/
+.main-hero{
+  grid-area: alias-hero;
+}
+/*******************************************************
+                        articles-aside CSS
+*******************************************************/
+.articles-aside{
+  grid-area: alias-aside;
+}
+/*******************************************************
+                        trending-articles CSS
+*******************************************************/
+.trending-articles{
+  grid-area: alias-trend;
+}
 }

@@ -114,7 +114,7 @@ body{
 
 main{
   display: grid;
-  grid-template-rows: 0.25fr 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.8fr 1fr;
   grid-template-areas: 
   "alias-nav"
   "alias-hero"
@@ -158,6 +158,14 @@ main{
  margin-top: 1rem ;
  font-size: 1.2rem;
  
+}
+.main-image{
+  background-image: url(./assets/images/image-web-3-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50%;
+  width: 100%;
 }
 /*******************************************************
                     articles-aside CSS
@@ -242,6 +250,8 @@ main{
     "alias-hero alias-hero alias-aside"
     "alias-hero alias-hero alias-aside"
     "alias-trend alias-trend alias-trend";
+    margin: 8%;
+    margin-top: 4%;
   }
   /*******************************************************
                         Navigation CSS
@@ -255,6 +265,7 @@ main{
 *******************************************************/
 .main-hero{
   grid-area: alias-hero;
+  margin-right: 2rem;
 }
 .main-article{
   display: flex;
@@ -265,6 +276,14 @@ main{
 }
 .main-arti{
   flex-basis: 60%;
+}
+.main-image{
+  background-image: url(./assets/images/image-web-3-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70%;
+  width: 100%;
 }
 /*******************************************************
                         articles-aside CSS
@@ -279,5 +298,8 @@ main{
   grid-area: alias-trend;
   display: flex;
   justify-content: row;
+}
+.article-image >img{
+  height: 100%;
 }
 }

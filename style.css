@@ -9,7 +9,7 @@
   --Neutral-Dark-grayish-blue: 236, 13%, 42%;
   --Neutral-Very-dark-blue: 240, 100%, 5%;
 
-  --font-familly-Inter:'Inter', sans-serif; ;
+  --font-familly-Inter: "Inter", sans-serif;
 }
 /*******************************************************
                           CSS Reset
@@ -98,34 +98,32 @@ ul {
 /*******************************************************
                         Shared CSS
 *******************************************************/
-body{
-    font-family: var(--font-familly-Inter);
-    font-size: 0.9375rem;
-    font-weight: 400;
-    min-height: 100dvh;
-    min-width: 100dvw;
+body {
+  font-family: var(--font-familly-Inter);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  min-height: 100dvh;
+  min-width: 100dvw;
 }
-
 
 /*******************************************************
                         footer CSS
 *******************************************************/
 
-
-main{
+main {
   display: grid;
   grid-template-rows: 0.25fr 1fr 0.8fr 1fr;
-  grid-template-areas: 
-  "alias-nav"
-  "alias-hero"
-  "alias-aside"
-  "alias-trend";
+  grid-template-areas:
+    "alias-nav"
+    "alias-hero"
+    "alias-aside"
+    "alias-trend";
   margin: 1rem;
 }
 /*******************************************************
                         Navigation CSS
 *******************************************************/
-.navigation{
+.navigation {
   grid-area: alias-nav;
   display: flex;
   justify-content: space-between;
@@ -134,32 +132,31 @@ main{
 /*******************************************************
                     Main hero CSS
 *******************************************************/
-.main-hero{
+.main-hero {
   grid-area: alias-hero;
 }
-.main-title{
+.main-title {
   font-weight: 800;
   font-size: 3rem;
   line-height: 3rem;
 }
-.main-article{
+.main-article {
   font-weight: 400;
   color: hsl(var(--Neutral-Dark-grayish-blue));
-  margin-top: 1rem ;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
-.read-more{
- border: none;
- background-color: hsl(var(--Primary-Soft-red));
- height: 3rem;
- width: 11rem;
- font-weight: 700;
- color: hsl(var(--Neutral-Off-white));
- margin-top: 1rem ;
- font-size: 1.2rem;
- 
+.read-more {
+  border: none;
+  background-color: hsl(var(--Primary-Soft-red));
+  height: 3rem;
+  width: 11rem;
+  font-weight: 700;
+  color: hsl(var(--Neutral-Off-white));
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
-.main-image{
+.main-image {
   background-image: url(./assets/images/image-web-3-mobile.jpg);
   background-position: center;
   background-size: cover;
@@ -170,7 +167,7 @@ main{
 /*******************************************************
                     articles-aside CSS
 *******************************************************/
-.articles-aside{
+.articles-aside {
   grid-area: alias-aside;
   background-color: hsl(var(--Neutral-Very-dark-blue));
   color: hsl(var(--Neutral-Off-white));
@@ -179,39 +176,39 @@ main{
   justify-content: space-between;
   padding: 1.5rem;
 }
-.articles-aside> h2{
+.articles-aside > h2 {
   color: hsl(var(--Primary-Soft-orange));
   font-weight: 800;
   font-size: 2rem;
 }
-.arti-title{
+.arti-title {
   font-weight: 700;
   font-weight: 1.7rem;
   color: hsl(var(--Neutral-Off-white));
- padding-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 .arti-para {
   color: hsl(var(--Neutral-Grayish-blue));
   font-weight: 400;
   font-size: 0.9rem;
 }
-.article1, .article2{
+.article1,
+.article2 {
   border-bottom: 1px solid hsl(233, 8%, 79%);
   padding-bottom: 2rem;
 }
 /*******************************************************
                  trending-articles CSS
 *******************************************************/
-.trending-articles{
+.trending-articles {
   grid-area: alias-trend;
   margin-top: 4rem;
 }
 .trending-articles > article {
   display: flex;
   margin-bottom: 2rem;
-  
 }
-.article-title{
+.article-title {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -223,11 +220,11 @@ main{
   font-weight: 700;
   font-size: 1.5rem;
 }
-.article-title> h4 {
+.article-title > h4 {
   font-weight: 700;
   font-size: 1.3rem;
 }
-.article-image{
+.article-image {
   flex-basis: 30%;
 }
 .attribution {
@@ -240,70 +237,74 @@ main{
 /*******************************************************
                         Media Query CSS
 *******************************************************/
-@media (min-width: 600px){
-  main{
+@media (min-width: 600px) {
+  main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    "alias-nav alias-nav alias-nav"
-    "alias-hero alias-hero alias-aside"
-    "alias-hero alias-hero alias-aside"
-    "alias-trend alias-trend alias-trend";
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "alias-nav alias-nav alias-nav"
+      "alias-hero alias-hero alias-aside"
+      "alias-hero alias-hero alias-aside"
+      "alias-trend alias-trend alias-trend";
     margin: 8%;
     margin-top: 4%;
   }
   /*******************************************************
                         Navigation CSS
 *******************************************************/
-.navigation{
-  grid-area: alias-nav;
-
-}
-/*******************************************************
+  .navigation {
+    grid-area: alias-nav;
+  }
+  /*******************************************************
                     Main hero CSS
 *******************************************************/
-.main-hero{
-  grid-area: alias-hero;
-  margin-right: 2rem;
-}
+  .main-hero {
+    grid-area: alias-hero;
+    margin-right: 2rem;
+  }
 
-.nav > a{
- padding-left: 2rem;
-}
-.main-article{
-  display: flex;
- 
-}
-.main-title{
-  flex-basis: 40%;
-}
-.main-arti{
-  flex-basis: 60%;
-}
-.main-image{
-  background-image: url(./assets/images/image-web-3-desktop.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 70%;
-  width: 100%;
-}
-/*******************************************************
+  .nav > a {
+    padding-left: 2rem;
+  }
+  .main-article {
+    display: flex;
+  }
+  .main-title {
+    flex-basis: 40%;
+  }
+  .main-arti {
+    flex-basis: 60%;
+  }
+  .main-image {
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 100%;
+  }
+  /*******************************************************
                         articles-aside CSS
 *******************************************************/
-.articles-aside{
-  grid-area: alias-aside;
-}
-/*******************************************************
+  .articles-aside {
+    grid-area: alias-aside;
+  }
+  /*******************************************************
                         trending-articles CSS
 *******************************************************/
-.trending-articles{
-  grid-area: alias-trend;
-  display: flex;
-  justify-content: row;
-}
-.article-image >img{
-  height: 100%;
-}
+  .trending-articles {
+    grid-area: alias-trend;
+    display: flex;
+    justify-content: row;
+  }
+  .article-image > img {
+    height: 100%;
+  }
+  .attribution {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    width: 100%;
+  }
 }

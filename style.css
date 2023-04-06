@@ -276,8 +276,8 @@ main {
   .main-title {
     flex-basis: 40%;
     color: black;
-    font-size: 4.5rem;
-line-height: 4.5rem;
+    font-size: 3.5rem;
+line-height: 3.5rem;
   }
   .main-arti {
     flex-basis: 60%;

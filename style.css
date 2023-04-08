@@ -119,6 +119,7 @@ main {
     "alias-aside"
     "alias-trend";
   margin: 1rem;
+  position: relative;
 }
 /*******************************************************
                         Navigation CSS
@@ -128,6 +129,40 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.menu{
+
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75vw;
+  background-color: white;
+  padding: 1.25rem;
+  box-shadow: -4px -4px -4px rgba(0, 0, 0, 0.5);
+  z-index: 9999999999;
+}
+.navi  {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navi > li {
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.close-nav{
+  background-color: transparent;
+ border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 99999;
+  cursor: pointer;
 }
 /*******************************************************
                     Main hero CSS
@@ -256,6 +291,18 @@ main {
   .navigation {
     grid-area: alias-nav;
   }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+  }
+  .nav > li {
+    margin-left: 1rem;
+  }
+  .hidden{
+    display: none;
+  }
+
   /*******************************************************
                     Main hero CSS
 *******************************************************/
@@ -270,14 +317,12 @@ main {
   .main-article {
     display: flex;
     margin-top: 3.5rem;
-  	
-
   }
   .main-title {
     flex-basis: 40%;
     color: black;
     font-size: 3.5rem;
-line-height: 3.5rem;
+    line-height: 3.5rem;
   }
   .main-arti {
     flex-basis: 60%;
@@ -308,9 +353,9 @@ line-height: 3.5rem;
     height: 100%;
   }
   .attribution {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 }

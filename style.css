@@ -109,7 +109,16 @@ body {
 /*******************************************************
                         footer CSS
 *******************************************************/
-
+.nav-bkg{
+  background-color: hsla(var(--Neutral-Very-dark-blue), 0.5);
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  z-index: 9999;
+}
+.nav-bkg[open]{
+  transform: translateX(0);
+}
 main {
   display: grid;
   grid-template-rows: 0.25fr 1fr 0.8fr 1fr;
@@ -140,6 +149,8 @@ main {
   width: 75vw;
   background-color: white;
   padding: 1.25rem;
+  min-height: 100vh;
+  min-height: 100dvh;
   box-shadow: -4px -4px -4px rgba(0, 0, 0, 0.5);
   z-index: 9999999999;
   transform: translateX(100%);
@@ -169,10 +180,15 @@ main {
 .nav-open{
   border: none;
   background-color: white;
+  --width-button:2.4rem;
+}
+.nav-open:hover{
+  
+  cursor: pointer;
 }
 .nav-open> img{
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--width-button);
+  height: var(--width-button);
 }
 /*******************************************************
                     Main hero CSS
@@ -301,12 +317,23 @@ main {
   .navigation {
     grid-area: alias-nav;
   }
-  .nav {
+  .menu{
+    display: flex;
+    position: unset;
+    transform: unset;
+    z-index: unset;
+    width: unset;
+    min-height: unset;
+    
+  }
+  .navi {
     display: flex;
     justify-content: flex-end;
-    position: static;
+    position: unset;
+    transform: unset;
+    top: unset;
   }
-  .nav > li {
+  .navi > li {
     margin-left: 1rem;
   }
   .hidden{

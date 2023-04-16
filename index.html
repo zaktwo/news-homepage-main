@@ -18,16 +18,17 @@
 </head>
 
 <body>
+  <div class="nav-bkg" ></div>
   <main>
     <header class="navigation">
       <figure class="logo">
         <img src="./assets/images/logo.svg" alt="">
       </figure>
       <nav class="menu">
-        <button class="close-nav hidden">
+        <button class="close-nav hidden" id="closeBtn">
           <img src="./assets/images/icon-menu-close.svg" alt="">
         </button>
-        <ul class="navi ">
+        <ul class="navi " id="mobileNav">
           <li><a href="#"> Home </a></li>
           <li><a href="#">New </a></li>
           <li><a href="#">Popular </a></li>
@@ -35,9 +36,10 @@
           <li><a href="#">Categories </a></li>
         </ul>
       </nav>
-      <button class="nav-open hidden">
+      <button class="nav-open hidden" id="mobileNavBtn">
         <img src="./assets/images/icon-menu.svg" alt="" srcset="">
       </button>
+      
     </header>
 
     <article class="main-hero">
